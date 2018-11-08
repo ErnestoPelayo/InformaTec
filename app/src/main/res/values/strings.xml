@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InformaTec</string>
+    <string name="name">Evento: </string>
+    <string name="ubication">Ubicacion: </string>
+</resources>

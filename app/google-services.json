@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "162395977520",
+    "firebase_url": "https://informatec-15b97.firebaseio.com",
+    "project_id": "informatec-15b97",
+    "storage_bucket": "informatec-15b97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162395977520:android:266c7f07a7f03198",
+        "android_client_info": {
+          "package_name": "com.example.macbook.informatec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162395977520-qr1a18h04cmg0bv7gseqc3cpan34q11j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5ehepDSU7gMIZXSJDaWe6LVxg0Yuv8UQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
