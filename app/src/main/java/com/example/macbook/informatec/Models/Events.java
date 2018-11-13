@@ -17,6 +17,7 @@ public class Events {
         this.informationComplete = informationComplete;
     }
 
+
     public String getName() {
         return name;
     }

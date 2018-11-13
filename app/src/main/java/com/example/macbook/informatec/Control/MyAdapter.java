@@ -2,6 +2,7 @@ package com.example.macbook.informatec.Control;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,15 +43,18 @@ public MyAdapter (Context c,ArrayList<Events> e){
         return events.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder {
 
+    CardView date;
     TextView name,ubication;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
+
          name = itemView.findViewById(R.id.text_name);
          ubication = itemView.findViewById(R.id.ubication);
+        date = itemView.findViewById(R.id.cardview);
     }
 
 }
