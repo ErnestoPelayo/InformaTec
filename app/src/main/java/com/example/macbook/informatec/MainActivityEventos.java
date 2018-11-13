@@ -33,7 +33,7 @@ public class MainActivityEventos extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
 
-        reference = FirebaseDatabase.getInstance().getReference().child("Robotica");
+        reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
