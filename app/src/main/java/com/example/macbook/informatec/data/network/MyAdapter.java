@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.Control;
+package com.example.macbook.informatec.data.network;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.macbook.informatec.Models.Events;
+import com.example.macbook.informatec.data.models.Events;
 import com.example.macbook.informatec.R;
 
 import java.util.ArrayList;
