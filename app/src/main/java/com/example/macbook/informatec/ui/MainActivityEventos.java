@@ -7,8 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.example.macbook.informatec.data.datasource.MyAdapter;
-import com.example.macbook.informatec.data.models.Events;
+import com.example.macbook.informatec.Adapters.MyAdapter;
+import com.example.macbook.informatec.model.Events;
 import com.example.macbook.informatec.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,6 +33,8 @@ public class MainActivityEventos extends AppCompatActivity  implements Conection
         recyclerView =findViewById(R.id.myRecyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
+
+        Conection();
 
     }
 

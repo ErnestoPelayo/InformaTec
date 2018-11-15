@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.data.models;
+package com.example.macbook.informatec.model;
 
 public class Events {
 
