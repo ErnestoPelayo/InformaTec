@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.data.network;
+package com.example.macbook.informatec.data.datasource;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

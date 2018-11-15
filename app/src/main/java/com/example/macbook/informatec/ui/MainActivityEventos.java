@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.example.macbook.informatec.data.network.MyAdapter;
+import com.example.macbook.informatec.data.datasource.MyAdapter;
 import com.example.macbook.informatec.data.models.Events;
 import com.example.macbook.informatec.R;
 import com.google.firebase.database.DataSnapshot;
@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivityEventos extends AppCompatActivity {
+public class MainActivityEventos extends AppCompatActivity  implements ConectionFirebase{
 
     RecyclerView recyclerView;
     DatabaseReference reference;
@@ -34,6 +34,11 @@ public class MainActivityEventos extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
 
+    }
+
+
+    @Override
+    public void Conection() {
         reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
 
         reference.addValueEventListener(new ValueEventListener() {
@@ -57,7 +62,6 @@ public class MainActivityEventos extends AppCompatActivity {
                 Toast.makeText(MainActivityEventos.this,"Salio algo mal",Toast.LENGTH_LONG).show();
             }
         });
-
 
 
     }
