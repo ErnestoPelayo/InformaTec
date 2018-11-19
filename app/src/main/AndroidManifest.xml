@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivityConcursos" />
-        <activity android:name=".ui.MainActivityEventos" />
+        <activity android:name=".ui.ActivityConcursos" />
+        <activity android:name=".ui.ActivityEventos" />
     </application>
 
 </manifest>

@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MainActivityConcursos.class));
+                startActivity(new Intent(MainActivity.this,ActivityConcursos.class));
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MainActivityEventos.class));
+                startActivity(new Intent(MainActivity.this,ActivityEventos.class));
             }
         });
 

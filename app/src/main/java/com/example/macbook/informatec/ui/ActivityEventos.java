@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.macbook.informatec.Adapters.MyAdapter;
 import com.example.macbook.informatec.model.Events;
 import com.example.macbook.informatec.R;
+import com.example.macbook.informatec.MvpInformatec;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,32 +19,29 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivityConcursos extends AppCompatActivity {
+public class ActivityEventos extends AppCompatActivity implements MvpInformatec.View {
 
     RecyclerView recyclerView;
     DatabaseReference reference;
     ArrayList<Events> list;
     MyAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_concursos);
+        setContentView(R.layout.activity_main_eventos);
 
-        recyclerView =findViewById(R.id.myRecyclerView3);
+        recyclerView =findViewById(R.id.myRecyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
 
-
-        //Conection();
-
+        conectionFireBase();
     }
-/*
+
     @Override
-    public void Conection() {
-
-
-        reference = FirebaseDatabase.getInstance().getReference().child("Robotica");
+    public void conectionFireBase() {
+        reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -57,15 +55,19 @@ public class MainActivityConcursos extends AppCompatActivity {
 
                 }
 
-                adapter = new MyAdapter(MainActivityConcursos.this,list);
+                adapter = new MyAdapter(ActivityEventos.this,list);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MainActivityConcursos.this,"Salio algo mal",Toast.LENGTH_LONG).show();
+                Toast.makeText(ActivityEventos.this,"Salio algo mal",Toast.LENGTH_LONG).show();
             }
         });
+
+
     }
-*/
+
 }
+
+
