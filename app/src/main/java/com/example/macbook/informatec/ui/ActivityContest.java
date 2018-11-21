@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ActivityConcursos extends AppCompatActivity  {
+public class ActivityContest extends AppCompatActivity  {
 
     RecyclerView recyclerView;
     DatabaseReference reference;

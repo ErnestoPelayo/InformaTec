@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ActivityEventos extends AppCompatActivity implements MvpInformatec {
+public class ActivityConference extends AppCompatActivity implements MvpInformatec {
 
     RecyclerView recyclerView;
     DatabaseReference reference;
@@ -35,7 +35,7 @@ public class ActivityEventos extends AppCompatActivity implements MvpInformatec 
         recyclerView =findViewById(R.id.myRecyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
-        reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
+        reference = FirebaseDatabase.getInstance().getReference().child("Conferences");
         if(reference!=null){
             getDatosFireBase(reference);
         }
@@ -56,12 +56,12 @@ public class ActivityEventos extends AppCompatActivity implements MvpInformatec 
                         list.add(p);
                     }
 
-                    adapter = new MyAdapter(ActivityEventos.this,list);
+                    adapter = new MyAdapter(ActivityConference.this,list);
                     recyclerView.setAdapter(adapter);
                 }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ActivityEventos.this,"Salio algo mal",Toast.LENGTH_LONG).show();
+                Toast.makeText(ActivityConference.this,"Salio algo mal",Toast.LENGTH_LONG).show();
             }
         });
     }
