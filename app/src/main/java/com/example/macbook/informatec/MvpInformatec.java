@@ -1,15 +1,11 @@
 package com.example.macbook.informatec;
 
+import com.google.firebase.database.DatabaseReference;
+
 public interface MvpInformatec {
 
-    interface View{
-        void conectionFireBase();
+        void getDatosFireBase(DatabaseReference databaseReference);
 
-    }
 
-    interface Presenter{
-        void setView(MvpInformatec.View view);
-
-    }
 
 }

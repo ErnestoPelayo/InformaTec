@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ActivityEventos extends AppCompatActivity implements MvpInformatec.View {
+public class ActivityEventos extends AppCompatActivity implements MvpInformatec {
 
     RecyclerView recyclerView;
     DatabaseReference reference;
@@ -35,39 +35,36 @@ public class ActivityEventos extends AppCompatActivity implements MvpInformatec.
         recyclerView =findViewById(R.id.myRecyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
+        reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
+        if(reference!=null){
+            getDatosFireBase(reference);
+        }
 
-        conectionFireBase();
     }
 
+
+
     @Override
-    public void conectionFireBase() {
-        reference = FirebaseDatabase.getInstance().getReference().child("Eventos");
+    public void getDatosFireBase(DatabaseReference databaseReference) {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
+                    {
+                        Events p= dataSnapshot1.getValue(Events.class);
+                        list.add(p);
+                    }
 
-                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
-                {
-
-                    Events p= dataSnapshot1.getValue(Events.class);
-                    list.add(p);
-
+                    adapter = new MyAdapter(ActivityEventos.this,list);
+                    recyclerView.setAdapter(adapter);
                 }
-
-                adapter = new MyAdapter(ActivityEventos.this,list);
-                recyclerView.setAdapter(adapter);
-            }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(ActivityEventos.this,"Salio algo mal",Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
-
 }
 
 

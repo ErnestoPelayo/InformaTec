@@ -19,8 +19,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 Context context;
 ArrayList<Events> events;
 
+    public Context getContext() {
+        return context;
+    }
 
-public MyAdapter (Context c,ArrayList<Events> e){
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public MyAdapter (Context c, ArrayList<Events> e){
 
     context=c;
     events=e;

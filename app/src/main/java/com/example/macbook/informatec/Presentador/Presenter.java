@@ -1,20 +1,66 @@
 package com.example.macbook.informatec.Presentador;
 
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
+
+import com.example.macbook.informatec.Adapters.MyAdapter;
 import com.example.macbook.informatec.model.Events;
 import com.example.macbook.informatec.MvpInformatec;
+import com.example.macbook.informatec.ui.ActivityConcursos;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
-public class Presenter implements MvpInformatec.Presenter {
+import java.util.ArrayList;
 
-    private MvpInformatec mview;
+public class Presenter implements MvpInformatec {
+
     private Events events;
+    ArrayList<Events> list;
+    Context context;
+    MyAdapter adapter;
+    ActivityConcursos c;
 
-    public Presenter(){
-        events=new Events();
+
+    public MyAdapter getAdapter() {
+        return adapter;
     }
+
+     public ArrayList<Events> getList() {
+        return list;
+
+    }
+
+    public void setList(ArrayList<Events> list) {
+        this.list = list;
+    }
+
+    public Presenter(Context context) {
+        this.context = context;
+    }
+
+
 
     @Override
-    public void setView(MvpInformatec.View view) {
-        mview = (MvpInformatec) view;
-    }
+    public void getDatosFireBase(final DatabaseReference databaseReference) {
 
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    Events p= snapshot.getValue(Events.class);
+                    list.add(p);
+                }
+                adapter=new MyAdapter(adapter.getContext(),list);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 }
