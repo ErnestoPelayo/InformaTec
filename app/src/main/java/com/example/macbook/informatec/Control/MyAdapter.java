@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.Adapters;
+package com.example.macbook.informatec.Control;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,10 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.macbook.informatec.model.Contest;
-import com.example.macbook.informatec.model.Events;
+import com.example.macbook.informatec.Models.Events;
 import com.example.macbook.informatec.R;
-import com.example.macbook.informatec.ui.ActivityContest;
 
 import java.util.ArrayList;
 
@@ -20,21 +18,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 Context context;
 ArrayList<Events> events;
-    ArrayList<Contest> contests;
 
-    public MyAdapter(ActivityContest c,ArrayList<Contest> list) {
 
-    }
-
-    public Context getContext() {
-        return context;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
-    }
-
-    public MyAdapter (Context c, ArrayList<Events> e){
+public MyAdapter (Context c,ArrayList<Events> e){
 
     context=c;
     events=e;

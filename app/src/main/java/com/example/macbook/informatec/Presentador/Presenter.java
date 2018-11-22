@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.example.macbook.informatec.Adapters.MyAdapter;
+import com.example.macbook.informatec.model.Contest;
 import com.example.macbook.informatec.model.Events;
 import com.example.macbook.informatec.MvpInformatec;
 import com.example.macbook.informatec.ui.ActivityContest;
@@ -16,11 +17,12 @@ import java.util.ArrayList;
 
 public class Presenter implements MvpInformatec {
 
-    private Events events;
-    ArrayList<Events> list;
-    Context context;
-    MyAdapter adapter;
-    ActivityContest c;
+    public Events events;
+    public ArrayList<Events> list;
+    public ArrayList<Contest> list;
+    public Context context;
+    public MyAdapter adapter;
+    public ActivityContest c;
 
 
     public MyAdapter getAdapter() {
@@ -32,6 +34,7 @@ public class Presenter implements MvpInformatec {
 
     }
 
+
     public void setList(ArrayList<Events> list) {
         this.list = list;
     }
@@ -39,8 +42,6 @@ public class Presenter implements MvpInformatec {
     public Presenter(Context context) {
         this.context = context;
     }
-
-
 
     @Override
     public void getDatosFireBase(final DatabaseReference databaseReference) {
