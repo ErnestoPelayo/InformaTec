@@ -5,16 +5,16 @@ public class Events {
     private String name;
     private String ubication;
     private String date;
-    private String informationComplete;
+    private String information;
 
     public Events() {
     }
 
-    public Events(String name, String description, String date, String informationComplete) {
+    public Events(String name, String description, String date, String information) {
         this.name = name;
         this.ubication = description;
         this.date = date;
-        this.informationComplete = informationComplete;
+        this.information = information;
     }
 
 
@@ -44,11 +44,11 @@ public class Events {
     }
 
     public String getInformationComplete() {
-        return informationComplete;
+        return information;
     }
 
-    public void setInformationComplete(String informationComplete) {
-        this.informationComplete = informationComplete;
+    public void setInformationComplete(String information) {
+        this.information = information;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Events {
                 "name='" + name + '\'' +
                 ", description='" + ubication + '\'' +
                 ", date='" + date + '\'' +
-                ", informationComplete='" + informationComplete + '\'' +
+                ", informationComplete='" + information + '\'' +
                 '}';
     }
 }
