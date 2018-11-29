@@ -4,10 +4,9 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.example.macbook.informatec.Adapters.MyAdapter;
-import com.example.macbook.informatec.model.Contest;
-import com.example.macbook.informatec.model.Events;
+import com.example.macbook.informatec.Models.Events;
 import com.example.macbook.informatec.MvpInformatec;
-import com.example.macbook.informatec.ui.ActivityContest;
+import com.example.macbook.informatec.View.ActivityContest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -15,11 +14,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Presenter implements MvpInformatec {
+public class Presenter {
 
     public Events events;
     public ArrayList<Events> list;
-    public ArrayList<Contest> list;
     public Context context;
     public MyAdapter adapter;
     public ActivityContest c;
@@ -53,7 +51,6 @@ public class Presenter implements MvpInformatec {
                     Events p= snapshot.getValue(Events.class);
                     list.add(p);
                 }
-                adapter=new MyAdapter(adapter.getContext(),list);
 
             }
 
