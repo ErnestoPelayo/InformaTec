@@ -39,9 +39,7 @@ public class Presenter implements MvpInformatec {
     public Presenter(Context context) {
         this.context = context;
     }
-
-
-
+    
     @Override
     public void getDatosFireBase(final DatabaseReference databaseReference) {
 
