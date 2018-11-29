@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.macbook.informatec.model.Events;
+import com.example.macbook.informatec.Models.Events;
 import com.example.macbook.informatec.R;
 
 import java.util.ArrayList;
@@ -19,24 +19,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 Context context;
 ArrayList<Events> events;
 
-    public Context getContext() {
-        return context;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
-    }
-
-    public MyAdapter (Context c, ArrayList<Events> e){
-
-    context=c;
+    public MyAdapter(ArrayList<Events> e){
     events=e;
-}
+    }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.content,parent,false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.content,parent,false));
     }
 
     @Override
@@ -65,5 +55,11 @@ ArrayList<Events> events;
     }
 
 }
+    public Context getContext() {
+        return context;
+    }
 
+    public void setContext(Context context) {
+        this.context = context;
+    }
 }

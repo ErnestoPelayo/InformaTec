@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.model;
+package com.example.macbook.informatec.Models;
 
 public class Events {
 
@@ -16,6 +16,7 @@ public class Events {
         this.date = date;
         this.information = information;
     }
+
 
 
     public String getName() {
@@ -42,11 +43,11 @@ public class Events {
         this.date = date;
     }
 
-    public String getInformation() {
+    public String getInformationComplete() {
         return information;
     }
 
-    public void setInformation(String information) {
+    public void setInformationComplete(String information) {
         this.information = information;
     }
 

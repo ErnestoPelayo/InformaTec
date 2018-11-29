@@ -1,16 +1,16 @@
-package com.example.macbook.informatec.ui;
+package com.example.macbook.informatec.View;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.example.macbook.informatec.Adapters.MyAdapter;
-import com.example.macbook.informatec.model.Events;
-import com.example.macbook.informatec.R;
+import com.example.macbook.informatec.Models.Events;
 import com.example.macbook.informatec.MvpInformatec;
+import com.example.macbook.informatec.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,16 +36,16 @@ public class ActivityConference extends AppCompatActivity implements MvpInformat
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<Events>();
         reference = FirebaseDatabase.getInstance().getReference().child("Conferences");
-        if(reference!=null){
-            getDatosFireBase(reference);
-        }
+
+            getDatesFireBase(reference);
+
 
     }
 
 
 
     @Override
-    public void getDatosFireBase(DatabaseReference databaseReference) {
+    public void getDatesFireBase(DatabaseReference databaseReference) {
         databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -56,7 +56,7 @@ public class ActivityConference extends AppCompatActivity implements MvpInformat
                         list.add(p);
                     }
 
-                    adapter = new MyAdapter(ActivityConference.this,list);
+                    adapter = new MyAdapter(list);
                     recyclerView.setAdapter(adapter);
                 }
             @Override

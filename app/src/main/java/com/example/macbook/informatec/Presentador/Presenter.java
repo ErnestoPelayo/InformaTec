@@ -4,9 +4,9 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.example.macbook.informatec.Adapters.MyAdapter;
-import com.example.macbook.informatec.model.Events;
+import com.example.macbook.informatec.Models.Events;
 import com.example.macbook.informatec.MvpInformatec;
-import com.example.macbook.informatec.ui.ActivityContest;
+import com.example.macbook.informatec.View.ActivityContest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -14,13 +14,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Presenter implements MvpInformatec {
+public class Presenter {
 
-    private Events events;
-    ArrayList<Events> list;
-    Context context;
-    MyAdapter adapter;
-    ActivityContest c;
+    public Events events;
+    public ArrayList<Events> list;
+    public Context context;
+    public MyAdapter adapter;
+    public ActivityContest c;
 
 
     public MyAdapter getAdapter() {
@@ -32,6 +32,7 @@ public class Presenter implements MvpInformatec {
 
     }
 
+
     public void setList(ArrayList<Events> list) {
         this.list = list;
     }
@@ -39,7 +40,11 @@ public class Presenter implements MvpInformatec {
     public Presenter(Context context) {
         this.context = context;
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> af37d6a8e8fd3c37b55ded94d8adeaecafdfa398
     @Override
     public void getDatosFireBase(final DatabaseReference databaseReference) {
 
@@ -50,7 +55,6 @@ public class Presenter implements MvpInformatec {
                     Events p= snapshot.getValue(Events.class);
                     list.add(p);
                 }
-                adapter=new MyAdapter(adapter.getContext(),list);
 
             }
 
