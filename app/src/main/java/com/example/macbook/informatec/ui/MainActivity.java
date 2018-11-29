@@ -1,4 +1,4 @@
-package com.example.macbook.informatec.View;
+package com.example.macbook.informatec.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ActivityContest.class));
+                startActivity(new Intent(MainActivity.this,ActivityConcursos.class));
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ActivityConference.class));
+                startActivity(new Intent(MainActivity.this,ActivityEventos.class));
             }
         });
 
