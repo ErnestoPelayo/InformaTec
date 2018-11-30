@@ -44,7 +44,7 @@ conectionFireBase();
 
     @Override
     public void conectionFireBase() {
-        reference = FirebaseDatabase.getInstance().getReference().child("Robotica");
+        reference = FirebaseDatabase.getInstance().getReference().child("Conferences");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
