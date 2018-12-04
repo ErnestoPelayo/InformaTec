@@ -9,7 +9,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/myRecyclerView3"
         android:layout_width="388dp"
-        android:layout_height="443dp"
+        android:layout_height="504dp"
         android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,11 +18,9 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="126dp"
-        app:layout_constraintBottom_toTopOf="@+id/myRecyclerView3"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="187dp"
+        android:layout_height="62dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/xx" />
+        app:srcCompat="@drawable/xx"
+        tools:layout_editor_absoluteY="0dp" />
 </android.support.constraint.ConstraintLayout>
