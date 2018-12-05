@@ -8,21 +8,60 @@
 
 
     <Button
-        android:id="@+id/btn_contestAction"
+        android:id="@+id/btn_contestCreate"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="111dp"
         android:text="Alta Concursos" />
 
     <Button
-        android:id="@+id/btn_conferencesActions"
+        android:id="@+id/btn_ConferencesCreate"
         android:layout_width="203dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn_contestAction"
-        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/btn_contestCreate"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="339dp"
         android:text="Alta Conferenciass" />
+
+    <Button
+        android:id="@+id/btnContestDelete"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_contestCreate"
+        android:layout_alignStart="@+id/btn_ConferencesCreate"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="0dp"
+        android:text="Borrar Concurso" />
+
+    <Button
+        android:id="@+id/btnContestUpdate"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnContestDelete"
+        android:layout_alignStart="@+id/btn_ConferencesCreate"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="0dp"
+        android:text="Actualizar Concurso" />
+
+    <Button
+        android:id="@+id/btnConferencesDelete"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_ConferencesCreate"
+        android:layout_alignStart="@+id/btn_ConferencesCreate"
+        android:layout_marginTop="0dp"
+        android:text="Borrar Conferencias" />
+
+    <Button
+        android:id="@+id/btnConferencesUpdate"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConferencesDelete"
+        android:layout_alignStart="@+id/btn_ConferencesCreate"
+        android:text="Actulizar Conferencia" />
 
 </RelativeLayout>
