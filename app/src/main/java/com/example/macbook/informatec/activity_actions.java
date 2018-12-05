@@ -6,9 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.macbook.informatec.ui.Activity_ConferencesCreate;
+import com.example.macbook.informatec.ui.Activity_ContestCreate;
+import com.example.macbook.informatec.ui.Activity_ContestDelete;
+
 public class activity_actions extends AppCompatActivity {
 
-    Button btnContest,btnConferences;
+    Button btnContestCreate,btnConferencesCreate,btnDeleteContest,btnDeleteConferences,btnUpdateContest,btnUpdateConferences;
 
 
     @Override
@@ -16,22 +20,32 @@ public class activity_actions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actions);
 
-        btnContest= findViewById(R.id.btn_contestCreate);
-        btnConferences=findViewById(R.id.btn_ConferencesCreate);
+        btnContestCreate= findViewById(R.id.btn_contestCreate);
+        btnConferencesCreate=findViewById(R.id.btn_ConferencesCreate);
+        btnDeleteContest=findViewById(R.id.btnContestDelete);
 
-        btnContest.setOnClickListener(new View.OnClickListener() {
+        btnContestCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(activity_actions.this,Activity_ContestAction.class));
+                startActivity(new Intent(activity_actions.this,Activity_ContestCreate.class));
             }
         });
 
-        btnConferences.setOnClickListener(new View.OnClickListener() {
+        btnConferencesCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(activity_actions.this,Activity_ConferencesActions.class));
+                startActivity(new Intent(activity_actions.this,Activity_ConferencesCreate.class));
             }
         });
+
+        btnDeleteContest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(activity_actions.this,Activity_ContestDelete.class));
+            }
+        });
+
+
 
              }
 

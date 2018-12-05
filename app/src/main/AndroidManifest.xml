@@ -22,8 +22,9 @@
             android:name=".activity_actions"
             android:label="@string/title_activity_actions"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Activity_ConferencesActions" />
-        <activity android:name=".Activity_ContestAction"></activity>
+        <activity android:name=".ui.Activity_ConferencesCreate" />
+        <activity android:name=".ui.Activity_ContestCreate" />
+        <activity android:name=".ui.Activity_ContestDelete"></activity>
     </application>
 
 </manifest>

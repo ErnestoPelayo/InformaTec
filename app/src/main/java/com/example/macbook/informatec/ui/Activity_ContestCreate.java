@@ -1,4 +1,4 @@
-package com.example.macbook.informatec;
+package com.example.macbook.informatec.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.macbook.informatec.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Activity_ContestAction extends AppCompatActivity {
+public class Activity_ContestCreate extends AppCompatActivity {
 
     Button btn_Save;
     EditText txt_name,txt_date,txt_ubication,txt_information;

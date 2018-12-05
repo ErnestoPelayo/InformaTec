@@ -3,4 +3,6 @@
     <string name="name">Evento: </string>
     <string name="ubication">Ubicacion: </string>
     <string name="title_activity_actions">activity_actions</string>
+    <string name="campo_name">name</string>
+
 </resources>
