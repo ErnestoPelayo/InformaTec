@@ -1,11 +1,13 @@
 package com.example.macbook.informatec.Domain;
 
 import android.support.annotation.NonNull;
+import android.widget.ImageView;
 
 import com.example.macbook.informatec.Domain.model.Events;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ public class ContestRepositoryImplement implements EventsRepository {
     private FirebaseHelper helper;
     private final static String KEY = "Contest";
     private ExecutorService executor;
+
 
     public ContestRepositoryImplement(){
         helper = FirebaseHelper.getInstance();

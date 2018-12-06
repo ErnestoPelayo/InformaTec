@@ -58,6 +58,9 @@ public class Activity_ContestCreate extends AppCompatActivity {
                 txt_name.setText("");
                 txt_ubication.setText("");
 
+                Toast.makeText(Activity_ContestCreate.this, "Se agrego correctamente", Toast.LENGTH_LONG).show();
+
+
             }
         });
 

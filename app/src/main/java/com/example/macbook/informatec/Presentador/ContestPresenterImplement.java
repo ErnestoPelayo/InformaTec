@@ -11,6 +11,7 @@ public class ContestPresenterImplement implements EventsPresenter {
     private EventsView mView;
     private EventsRepository mRepository;
 
+
     public ContestPresenterImplement(EventsView view, EventsRepository repository) {
         mView = view;
         mRepository = repository;
@@ -27,5 +28,6 @@ public class ContestPresenterImplement implements EventsPresenter {
                     }
                 }
         );
+
     }
 }

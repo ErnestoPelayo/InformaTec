@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.macbook.informatec.R;
 import com.google.firebase.database.DatabaseReference;
@@ -57,6 +58,8 @@ public class Activity_ConferencesCreate extends AppCompatActivity {
                 txt_information.setText("");
                 txt_name.setText("");
                 txt_ubication.setText("");
+
+                Toast.makeText(Activity_ConferencesCreate.this, "Se agrego correctamente", Toast.LENGTH_LONG).show();
 
             }
         });
