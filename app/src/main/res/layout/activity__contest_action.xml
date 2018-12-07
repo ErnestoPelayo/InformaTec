@@ -8,12 +8,12 @@
 
     <EditText
         android:id="@+id/editText_name"
-        android:layout_width="wrap_content"
+        android:layout_width="96dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="148dp"
+        android:layout_marginStart="267dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="21dp"
         android:ems="10"
@@ -23,12 +23,12 @@
 
     <EditText
         android:id="@+id/editText_date"
-        android:layout_width="wrap_content"
+        android:layout_width="222dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_name"
         android:layout_alignStart="@+id/editText_name"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="11dp"
         android:ems="10"
@@ -36,12 +36,12 @@
 
     <EditText
         android:id="@+id/editText_ubication"
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/editText_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="282dp"
         android:layout_marginEnd="17dp"
         android:ems="10"
@@ -49,14 +49,14 @@
 
     <EditText
         android:id="@+id/editText_Information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="98dp"
+        android:layout_height="57dp"
         android:layout_below="@+id/editText_ubication"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="158dp"
         android:ems="10"
@@ -108,12 +108,12 @@
 
     <Button
         android:id="@+id/btn_save"
-        android:layout_width="61dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginStart="274dp"
+        android:layout_marginBottom="62dp"
         android:background="@color/colorAccent" />
 
     <TextView

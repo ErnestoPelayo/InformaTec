@@ -26,7 +26,8 @@
         <activity android:name=".ui.Activity_ContestCreate" />
         <activity android:name=".ui.Activity_ContestDelete" />
         <activity android:name=".Activity_ContestUpdate" />
-        <activity android:name=".ActivityConferenceUpdate"></activity>
+        <activity android:name=".ActivityConferenceUpdate" />
+        <activity android:name=".ActivitiConferencesDelete"></activity>
     </application>
 
 </manifest>

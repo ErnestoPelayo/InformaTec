@@ -11,7 +11,11 @@
         android:id="@+id/btn_saveConferences"
         android:layout_width="167dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextInformationConference"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="121dp"
         android:text="Guardar" />
 
     <TextView
