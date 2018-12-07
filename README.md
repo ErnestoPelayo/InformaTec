@@ -21,11 +21,7 @@ This application was developed with the presentation of layer MVP and the implem
 ## Built With
 
 * MVP
-* Xpresso
 * Firebase
-
-
-
 
 ## Contributing
 
@@ -37,9 +33,11 @@ We use  Git  for versioning. For the versions available, see the repository.
 
 ## [](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#authors)Authors
 
--   **Ernesto M. Pelayo**  -  _Initial work_  -  [ErnestoPelayo](https://github.com/ernestopelayo)
+-   **Ernesto Pelayo Muñoz**  -  _Initial work_  -  [ErnestoPelayo](https://github.com/ernestopelayo)
 - **Jorge Wong Loaiza**  -  _Initial work_  -  [JorgeWong666](https://github.com/JorgeWong666)
+Ernesto Pelayo Muñoz
 
+##### Jorge
 
 
 ```

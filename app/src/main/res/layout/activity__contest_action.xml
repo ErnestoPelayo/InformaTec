@@ -12,8 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="99dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="21dp"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="6dp"
@@ -23,10 +25,12 @@
         android:id="@+id/editText_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_name"
         android:layout_alignStart="@+id/editText_name"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="168dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="11dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -36,8 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/editText_name"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="231dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="17dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -47,8 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_ubication"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="9dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="158dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -98,13 +108,13 @@
 
     <Button
         android:id="@+id/btn_save"
-        android:layout_width="229dp"
-        android:layout_height="37dp"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="132dp"
-        android:text="Guardar" />
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="74dp"
+        android:background="@color/colorAccent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -116,4 +126,16 @@
         android:layout_marginEnd="-124dp"
         android:text="Concursos"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="269dp"
+        android:layout_height="514dp"
+        android:layout_alignStart="@+id/textView_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="45dp"
+        app:srcCompat="@drawable/vvvv" />
 </RelativeLayout>
