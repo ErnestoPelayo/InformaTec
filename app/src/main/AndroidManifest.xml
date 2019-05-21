@@ -9,15 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivityConcursos" />
-        <activity android:name=".MainActivityEventos" />
+        <activity android:name=".ui.ActivityConferences" />
+        <activity android:name=".ui.ActivityContest" />
+        <activity
+            android:name=".activity_actions"
+            android:label="@string/title_activity_actions"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.Activity_ConferencesCreate" />
+        <activity android:name=".ui.Activity_ContestCreate" />
+        <activity android:name=".ui.Activity_ContestDelete" />
+        <activity android:name=".Activity_ContestUpdate" />
+        <activity android:name=".ActivityConferenceUpdate" />
+        <activity android:name=".ActivitiConferencesDelete"></activity>
     </application>
 
 </manifest>

@@ -1,20 +1,20 @@
-package com.example.macbook.informatec.Models;
+package com.example.macbook.informatec.Domain.model;
 
 public class Events {
 
     private String name;
     private String ubication;
     private String date;
-    private String informationComplete;
+    private String information;
 
     public Events() {
     }
 
-    public Events(String name, String description, String date, String informationComplete) {
+    public Events(String name, String description, String date, String information) {
         this.name = name;
         this.ubication = description;
         this.date = date;
-        this.informationComplete = informationComplete;
+        this.information = information;
     }
 
 
@@ -42,12 +42,12 @@ public class Events {
         this.date = date;
     }
 
-    public String getInformationComplete() {
-        return informationComplete;
+    public String getInformation() {
+        return information;
     }
 
-    public void setInformationComplete(String informationComplete) {
-        this.informationComplete = informationComplete;
+    public void setInformation(String information) {
+        this.information = information;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Events {
                 "name='" + name + '\'' +
                 ", description='" + ubication + '\'' +
                 ", date='" + date + '\'' +
-                ", informationComplete='" + informationComplete + '\'' +
+                ", informationComplete='" + information + '\'' +
                 '}';
     }
 }
